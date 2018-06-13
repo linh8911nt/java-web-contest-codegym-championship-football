@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout.html}">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Team Home</title>
+
+</head>
+
+<body>
+<section layout:fragment="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div th:each="team : ${teams}" class="row post">
+                    <div class="col-md-12">
+                        <a th:href="@{/view-team/__${team.id}__}"><h3 th:text="${team.name}"></h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+</body>
+
+</html>

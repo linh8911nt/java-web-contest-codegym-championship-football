@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>View Team</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="container">
+
+        <div class="col-md-8">
+        <h3 th:text="${team.name}"></h3>
+        (<a th:href="@{/edit-team/__${team.id}__}">Edit</a>)
+        (<a th:href="@{/delete-team/__${team.id}__}">Delete</a>)
+
+    </div>
+    </div>
+</section>
+</body>
+</html>

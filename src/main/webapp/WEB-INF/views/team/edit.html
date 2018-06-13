@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout.html}">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Team</title>
+</head>
+<body>
+<section layout:fragment="content">
+    <div class="container">
+
+        <th:block th:if="${message}">
+            <p th:text="${message}"></p>
+        </th:block>
+
+        <form class="form" method="post" th:action="@{/edit-team}" th:object="${team}">
+            <div class="col-md-4 offset-4">
+                <input class="form-control" type="hidden" th:field="*{id}">
+                <div class="form-group">
+                    <label for="team-name">Name:</label>
+                    <input id="team-name" class="form-control" type="text" th:field="*{name}"/>
+                </div>
+                <div class="form-group">
+                    <label for="btn-submit"></label>
+                    <button class="btn btn-primary" id="btn-submit" type="submit">Update</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
