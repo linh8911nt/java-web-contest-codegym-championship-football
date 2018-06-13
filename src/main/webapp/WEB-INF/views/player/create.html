@@ -15,7 +15,6 @@
         </th:block>
 
         <form class="form" method="post" th:action="@{/create-player}" th:object="${player}">
-            <div class="col-md-4 offset-4">
                 <div class="form-group">
                     <label for="player-name">Name:</label>
                     <input id="player-name" class="form-control" type="text" th:field="*{name}"/>
@@ -48,7 +47,6 @@
                     <label for="btn-submit"></label>
                     <button class="btn btn-primary" id="btn-submit" type="submit">Create</button>
                 </div>
-            </div>
         </form>
     </div>
 </section>

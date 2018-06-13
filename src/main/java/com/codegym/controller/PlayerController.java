@@ -30,7 +30,7 @@ public class PlayerController {
 
     @GetMapping("/create-player")
     public ModelAndView showCreateForm(){
-        ModelAndView modelAndView = new ModelAndView("/team/create");
+        ModelAndView modelAndView = new ModelAndView("/player/create");
         modelAndView.addObject("player", new Player());
         return modelAndView;
     }
